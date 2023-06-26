@@ -1,0 +1,18 @@
+﻿block head
+	meta(charset-"UTF-8")
+	title African Pygmy Hedgehog Club - #{title}
+
+block resources
+	link(rel="stylesheet" href="/css/style.css")
+	link(rel="stylesheet" href=(env == 'dev' ? "/css/uikit.css" :  "/css/uikit.min.css"))
+
+	script(type="text/javascript" src="/js/jquery.js")
+	script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js")
+	script(type="text/javascript" src=(env =='dev' ? "/js/uikit.js" : "/js/uikit.min.js"))
+	
+	if env == 'dev'
+		script(type="text/javascript", src="http://localhost:36729/livereload.js")
+
+	if resources.js && Array.isArray(resources.js)
+		each js in resources.js
+			script(type="text/javascript" src="" + js)

@@ -1,0 +1,17 @@
+{﻿
+	"language": "javascript",
+	"views": {
+		"active": {
+			"map": "function(doc) {\n  if(doc.type === 'page' && doc.active === true) {\n    emit(doc.order, doc);\n  }\n}"
+	   },
+		"active_names": {
+			"map": "function(doc) {\n  if(doc.type === 'page' && doc.active === true) {\n    emit(doc.order, doc.name);\n  }\n}"
+	   },
+		"content": {
+			"map": "function(doc) {\n  if(doc.type === 'page') {\n    emit(doc.name, doc.content);\n  }\n}"
+	   },
+		"all": {
+			"map": "function(doc) {\n  if(doc.type === 'page') {\n    emit(doc.name, doc);\n  }\n}"
+		}
+	}
+}

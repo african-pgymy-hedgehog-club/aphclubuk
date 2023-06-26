@@ -1,0 +1,22 @@
+extends templates/base
+
+block content
+    h1 User / Shows
+    
+    button.uk-button.uk-button-primary.uk-button-large#add-show
+        |Add Shows
+        
+    ul.shows
+        table(style="margin-left: 25%")
+            each show in shows
+                tr
+                    td
+                        li.show
+                            div(style="clear: both; text-align: center;")
+                                a(href="shows/" + show._id)= show.name 
+                    td
+                        include mixins/switch
+                        div.uk-float-left.uk-margin-large-left 
+                            +switch(show.active, show._id)
+                    td
+                        i.uk-icon-times.delete(data-id="" + show._id)

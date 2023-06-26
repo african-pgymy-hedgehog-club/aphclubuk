@@ -1,0 +1,33 @@
+﻿nav.uk-navbar
+	ul.uk-navbar-nav
+		if activePages
+			each page in activePages
+				- var href = page.name.toLowerCase().replace(' ', '_');
+				
+				if page.subNavs && page.subNavs.length > 0
+					li.uk-parent(data-uk-dropdown)
+						a(href="/" + href )= page.name
+							i.uk-icon-sort-down.drop-down-icon.uk-float-left.uk-margin-small-left
+						div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
+							ul.uk-nav.uk-nav-navbar
+								each sub in page.subNavs
+									- var subHref = href + '/' + sub.name.toLowerCase().replace(' ', '_');
+									li 
+										a(href="/" + subHref)= sub.name
+				
+				else
+					li
+						a(href="/" + href )= page.name
+	
+
+if user && user.accessLevel > 0
+	nav.uk-navbar#admin-navbar
+		ul.uk-navbar-nav 
+			li
+				a(href="/users/pages") Pages
+			li
+				a(href="/users/shows") Shows
+			li
+				a(href="/users/breeders") Breeders
+			li
+				a(href="/users/logout") Logout

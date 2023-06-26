@@ -1,0 +1,32 @@
+div.uk-modal-header
+    |Add Show
+
+
+form.uk-form.uk-form-horizontal#add-show
+    div.uk-form-row
+        label.uk-form-label
+            |Name
+        div.uk-form-controls
+            input(type="text" name="name")
+
+    div.uk-form-row
+        label.uk-form-label
+            |Location
+        div.uk-form-controls
+            textarea(type="text" name="location" rows="4" cols="20")
+        
+    div.uk-form-row
+        label.uk-form-label
+            |Date
+        div.uk-form-controls
+            input(type="text" name="date" data-uk-datepicker={format: 'DD/MM/YYYY'} readonly)
+    
+    div.uk-form-row
+        label.uk-form-label
+            |Time
+        div.uk-form-controls
+            input(type="text" name="time" data-uk-timepicker="{format: '12h'}" readonly)
+        
+    div.uk-form-row
+        button.uk-button.uk-button-primary.uk-float-right
+            |Save Show

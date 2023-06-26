@@ -1,0 +1,11 @@
+{
+    "globals": {
+        "UIkit": false,
+        "JST": false,
+        "CKEDITOR": false,
+        "$": false
+    },
+    "node": true,
+    "esnext": true,
+    "browser": true
+}

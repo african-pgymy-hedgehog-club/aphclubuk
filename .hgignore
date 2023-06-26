@@ -1,0 +1,10 @@
+syntax: glob
+node_modules/
+ssh/
+bin/Microsoft.NodejsTools.WebRole.dll
+aphclubuk.v12.suo
+.ntvs_analysis.dat
+aphclubuk.njsproj
+aphclubuk.sln
+obj/*
+models/data/couchdb/*

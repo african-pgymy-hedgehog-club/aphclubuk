@@ -1,0 +1,59 @@
+extends templates/base
+
+block content
+    h1="Show Entry / " + show.name
+    
+    div.uk-grid
+        div.uk-width-1-6
+        div.uk-width-4-6.uk-text-center
+            form.uk-form.uk-form-horizontal#show-entry
+                input(type="hidden" name="show-date" value="" + show.date)
+                div.uk-form-row
+                    lable.uk-form-label
+                        |Class
+                    div.uk-form-controls
+                        select(name="class")
+                            each clas in classes
+                                option(data-minimumage="" + JSON.stringify(clas.minimumAge) data-maximumage="" + JSON.stringify(clas.maximumAge) data-gender="" + clas.gender.toLowerCase() value="" + clas._id)= clas.name
+                    
+                div.uk-form-row
+                    label.uk-form-label
+                        |Hedgehog Name
+                    div.uk-form-controls
+                        input(type="text" name="hog_name" required)
+                    
+                div.uk-form-row
+                    label.uk-form-label
+                        |Owner's Name
+                    div.uk-form-controls
+                        input(type="text" name="owner" required)
+                
+                div.uk-form-row
+                    label.uk-form-label
+                        |Gender
+                    div.uk-form-controls
+                        select(name="gender")
+                            option(value="male")
+                                |Male
+                            option(value="female")
+                                |Female
+                
+                div.uk-form-row
+                    label.uk-form-label
+                        |Date of Birth
+                    div.uk-form-controls
+                        input(type="date" name="dob" max=maxDate, min=minDate required)
+
+                div.uk-form-row
+                    label.uk-form-label
+                        |Email
+                    div.uk-form-controls
+                        input(type="email" name="email" required)
+                
+
+                div.uk-form-row
+                    div.uk-form-controls
+                        button.uk-button.uk-button-large.uk-button-primary.uk-float-right(style="margin-right: 26%;")
+                            |Enter Show
+                    
+        div.uk-width-1-6

@@ -1,0 +1,32 @@
+extends ../templates/base.jade
+
+block content
+    h1= title 
+
+    div.uk-margin-large-bottom(style='clear: both;')
+        button.uk-button.uk-button-primary.uk-button-large#add-entry
+            |Add Entry
+        
+    div.uk-float-left.class-details
+        h2 Class Details
+        ul.details(id="" + clas._id)
+            li#name= clas.name
+            li#gender= clas.gender
+            li#minimumAge
+                span#date1= clas.minimumAge.date1
+                | 
+                span#date2= clas.minimumAge.date2 
+            li#maximumAge
+                span#date1= clas.maximumAge.date1
+                | 
+                span#date2= clas.maximumAge.date2 
+            li#price= clas.price
+    
+    div.entries.uk-float-left    
+        ul.entries
+            each entry in entries
+                li.class
+                    a(href="/entry/" + entry._id)= entry.owner.name
+                        |&nbsp;&nbsp;
+                    i.uk-icon-times.delete(data-it="" + entry._id)
+div(style="clear: both;")

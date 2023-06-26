@@ -1,0 +1,53 @@
+extends templates/base
+
+block content
+    include mixins/switch
+
+    h1 User / Pages
+    
+    button.uk-button.uk-button-primary.uk-button-large#add-page
+        |Add Page
+    
+    div.uk-text-center
+        ul.pages
+            table(style="margin-left: 25%")
+                each page in pages
+                    if(page.subNavs && page.subNavs.length > 0)
+                        tr(data-id="" + page._id)
+                            td
+                                i.uk-icon-sort-down.dropdown.uk-float-left(data-id="" + page._id)
+                                li.page.uk-float-left
+                                    div(style="clear: both; text-align: center;")
+                                    a.uk-float-left(href="/users/pages/" + page._id, data-id="" + page._id, data-rev="" + page._rev)= page.name
+                            td
+                                div.uk-float-left.uk-margin-large-left 
+                                    +switch(page.active, page._id)
+                            td
+                                i.uk-icon-times.delete-page(style="color: #f00; cursor: pointer;" data-id="" + page._id)
+                        tr(data-nav="" + page._id).sub-nav.hidden
+                            td(colspan=3)
+                                    table(style="margin-left: 5%")
+                                        each subNav, index in page.subNavs
+                                            tr
+                                                td
+                                                    li.page.uk-float-left(style="margin-left: 14px;")
+                                                        div(style="clear: both; text-align: center;")
+                                                        a.uk-float-left(href='/users/pages/' + page._id + '/' + index, data-id=page._id + '/' + index data-rev=page._rev)= subNav.name
+                                                td
+                                                    div.uk-float-left.uk-margin-large-left 
+                                                        +switch(subNav.active, page._id + '/' + index)
+                                                td
+                                                    i.uk-icon-times.delete-page(style="color: #f00; cursor: pointer;" data-id="" + page._id + '/' + index)
+
+                    else
+                        tr
+                            td
+                                li.page.uk-float-left(style="margin-left: 14px;")
+                                    div(style="clear: both; text-align: center;")
+                                    a.uk-float-left(href="/users/pages/" + page._id, data-id="" + page._id, data-rev="" + page._rev)= page.name
+                                    
+                            td
+                                div.uk-float-left.uk-margin-large-left 
+                                    +switch(page.active, page._id)
+                            td
+                                i.uk-icon-times.delete-page(style="color: #f00; cursor: pointer;" data-id="" + page._id)

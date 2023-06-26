@@ -1,0 +1,8 @@
+node_modules/
+ssh/
+models/data/couchdb/
+models/data/
+certs/
+database/
+.hginore
+.hg

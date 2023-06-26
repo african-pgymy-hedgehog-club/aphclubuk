@@ -1,0 +1,28 @@
+extends ../templates/base.jade
+
+block content
+    h1= title 
+
+    div.uk-margin-large-bottom(style='clear: both;')
+        button.uk-button.uk-button-primary.uk-button-large#add-class
+            |Add Class
+        
+    
+    div.uk-float-left.show-details
+        h2 Show Details
+        ul.details(id="" + show._id)
+            li#name= show.name
+            li#location!= show.location.replace(/\n|\r\n|\r/g, '<br />')
+            li#date= show.date
+            li#time= show.time
+        
+    
+    div.classes.uk-float-left
+        ul.classes
+            each clas in classes
+                li.class
+                    a(href="/users/class/" + clas._id)= clas.name
+                        |&nbsp;&nbsp;
+                    i.uk-icon-times.delete(data-id="" + clas._id)
+                        
+    div(style="clear: both;")

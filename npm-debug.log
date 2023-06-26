@@ -1,0 +1,134 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-S',
+1 verbose cli   'jquery-ui/sortable' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData jquery-ui/sortable
+8 silly fetchOtherPackageData jquery-ui/sortable
+9 silly cache add args [ 'jquery-ui/sortable', null ]
+10 verbose cache add spec jquery-ui/sortable
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'jquery-ui/sortable',
+11 silly cache add   scope: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'jquery-ui/sortable',
+11 silly cache add   spec: 'github:jquery-ui/sortable',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:jquery-ui/sortable.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/jquery-ui/sortable.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/jquery-ui/sortable.git',
+11 silly cache add      gitUrl: 'git://github.com/jquery-ui/sortable.git',
+11 silly cache add      shortcut: 'github:jquery-ui/sortable',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/jquery-ui/sortable/master/package.json' } }
+12 verbose addRemoteGit caching jquery-ui/sortable
+13 verbose addRemoteGit jquery-ui/sortable is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/jquery-ui/sortable.git
+15 silly tryClone cloning jquery-ui/sortable via git://github.com/jquery-ui/sortable.git
+16 verbose tryClone git-github-com-jquery-ui-sortable-git-c41001ad not in flight; caching
+17 verbose makeDirectory /root/.npm/_git-remotes creation not in flight; initializing
+18 silly makeDirectory /root/.npm/_git-remotes uid: 1001 gid: 1001
+19 info git [ 'clone',
+19 info git   '--template=/root/.npm/_git-remotes/_templates',
+19 info git   '--mirror',
+19 info git   'git://github.com/jquery-ui/sortable.git',
+19 info git   '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-c41001ad' ]
+20 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror git://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-c41001ad: Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-c41001ad'...
+20 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror git://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-c41001ad: fatal: remote error:
+20 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror git://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-c41001ad:   Repository not found.
+21 silly tryHTTPS attempting to clone git+https://github.com/jquery-ui/sortable.git
+22 silly tryClone cloning jquery-ui/sortable via git+https://github.com/jquery-ui/sortable.git
+23 verbose tryClone git-https-github-com-jquery-ui-sortable-git-6f62803e not in flight; caching
+24 info git [ 'clone',
+24 info git   '--template=/root/.npm/_git-remotes/_templates',
+24 info git   '--mirror',
+24 info git   'https://github.com/jquery-ui/sortable.git',
+24 info git   '/root/.npm/_git-remotes/git-https-github-com-jquery-ui-sortable-git-6f62803e' ]
+25 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror https://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-https-github-com-jquery-ui-sortable-git-6f62803e: Cloning into bare repository '/root/.npm/_git-remotes/git-https-github-com-jquery-ui-sortable-git-6f62803e'...
+25 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror https://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-https-github-com-jquery-ui-sortable-git-6f62803e: remote: Invalid username or password.
+25 verbose git clone --template=/root/.npm/_git-remotes/_templates --mirror https://github.com/jquery-ui/sortable.git /root/.npm/_git-remotes/git-https-github-com-jquery-ui-sortable-git-6f62803e: fatal: Authentication failed for 'https://github.com/jquery-ui/sortable.git/'
+26 silly trySSH attempting to clone git@github.com:jquery-ui/sortable.git
+27 silly tryClone cloning jquery-ui/sortable via git@github.com:jquery-ui/sortable.git
+28 verbose tryClone git-github-com-jquery-ui-sortable-git-e98bb3ea not in flight; caching
+29 info git [ 'clone',
+29 info git   '--template=/root/.npm/_git-remotes/_templates',
+29 info git   '--mirror',
+29 info git   'git@github.com:jquery-ui/sortable.git',
+29 info git   '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea' ]
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea'...
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: Permission denied (publickey).
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: fatal: Could not read from remote repository.
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea:
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: Please make sure you have the correct access rights
+30 error git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea: and the repository exists.
+31 silly fetchPackageMetaData Error: Command failed: git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea
+31 silly fetchPackageMetaData Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea'...
+31 silly fetchPackageMetaData Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+31 silly fetchPackageMetaData Permission denied (publickey).
+31 silly fetchPackageMetaData fatal: Could not read from remote repository.
+31 silly fetchPackageMetaData
+31 silly fetchPackageMetaData Please make sure you have the correct access rights
+31 silly fetchPackageMetaData and the repository exists.
+31 silly fetchPackageMetaData
+31 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:213:12)
+31 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+31 silly fetchPackageMetaData     at ChildProcess.emit (events.js:172:7)
+31 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:821:16)
+31 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+31 silly fetchPackageMetaData  error for jquery-ui/sortable { [Error: Command failed: git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea
+31 silly fetchPackageMetaData Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea'...
+31 silly fetchPackageMetaData Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+31 silly fetchPackageMetaData Permission denied (publickey).
+31 silly fetchPackageMetaData fatal: Could not read from remote repository.
+31 silly fetchPackageMetaData
+31 silly fetchPackageMetaData Please make sure you have the correct access rights
+31 silly fetchPackageMetaData and the repository exists.
+31 silly fetchPackageMetaData ]
+31 silly fetchPackageMetaData   killed: false,
+31 silly fetchPackageMetaData   code: 128,
+31 silly fetchPackageMetaData   signal: null,
+31 silly fetchPackageMetaData   cmd: 'git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea' }
+32 silly rollbackFailedOptional Starting
+33 silly rollbackFailedOptional Finishing
+34 silly runTopLevelLifecycles Starting
+35 silly runTopLevelLifecycles Finishing
+36 silly install printInstalled
+37 verbose stack Error: Command failed: git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea
+37 verbose stack Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea'...
+37 verbose stack Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+37 verbose stack Permission denied (publickey).
+37 verbose stack fatal: Could not read from remote repository.
+37 verbose stack
+37 verbose stack Please make sure you have the correct access rights
+37 verbose stack and the repository exists.
+37 verbose stack
+37 verbose stack     at ChildProcess.exithandler (child_process.js:213:12)
+37 verbose stack     at emitTwo (events.js:87:13)
+37 verbose stack     at ChildProcess.emit (events.js:172:7)
+37 verbose stack     at maybeClose (internal/child_process.js:821:16)
+37 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+38 verbose cwd /home/admin/web/aphclubuk
+39 error Linux 4.9.15-x86_64-linode81
+40 error argv "/usr/bin/nodejs" "/usr/bin/npm" "i" "-S" "jquery-ui/sortable"
+41 error node v4.2.6
+42 error npm  v3.5.2
+43 error code 128
+44 error Command failed: git clone --template=/root/.npm/_git-remotes/_templates --mirror git@github.com:jquery-ui/sortable.git /root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea
+44 error Cloning into bare repository '/root/.npm/_git-remotes/git-github-com-jquery-ui-sortable-git-e98bb3ea'...
+44 error Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+44 error Permission denied (publickey).
+44 error fatal: Could not read from remote repository.
+44 error
+44 error Please make sure you have the correct access rights
+44 error and the repository exists.
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

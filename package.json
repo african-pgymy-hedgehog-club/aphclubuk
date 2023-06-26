@@ -1,0 +1,57 @@
+{
+  "name": "aphclubuk",
+  "version": "0.0.0",
+  "private": true,
+  "env": "dev",
+  "scripts": {
+    "start": "node ./bin/www.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "description": "aphclubuk",
+  "author": {
+    "name": "SCrossan",
+    "email": ""
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "~1.8.1",
+    "connect-redis": "^2.5.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "eden-string": "0.0.32",
+    "express": "~4.9.0",
+    "express-session": "^1.15.6",
+    "grunt-nodemon": "^0.4.2",
+    "jade": "~1.6.0",
+    "jquery": "^2.2.4",
+    "jquery-ui": "^1.12.1",
+    "merge": "^1.2.0",
+    "moment": "^2.19.1",
+    "morgan": "~1.3.0",
+    "nano": "^6.4.2",
+    "nib": "^1.1.2",
+    "nodemailer": "^4.6.0",
+    "nodemailer-sendmail-transport": "^1.0.2",
+    "paypal-ipn": "^3.0.0",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.1.3",
+    "socket.io": "^1.7.4",
+    "stylus": "0.42.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babelify": "^7.3.0",
+    "envify": "^3.4.1",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

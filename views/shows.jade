@@ -1,0 +1,15 @@
+extends templates/base
+
+block content
+    h1 Shows
+    
+    if showActive
+        a(href="/show/enter")
+            button.uk-button.uk-button-primary.uk-button-large
+                |Enter Show
+
+    div.shows
+        ul.shows
+            each show in shows
+                li.show
+                    a(href="shows/" + show._id)= show.name 

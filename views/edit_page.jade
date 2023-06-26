@@ -1,0 +1,17 @@
+﻿extends templates/base
+
+block content
+	h1= title
+
+	div.uk-text-center
+		input(type="hidden" name="id" value="" + id)
+		
+		if subNavIndex
+			input(type="hidden", name="sub-nav-index", value="" + subNavIndex)
+			
+		
+		br
+		br
+		textarea#edit-page= content
+		br
+		button.uk-button.uk-button-primary#save-page Save

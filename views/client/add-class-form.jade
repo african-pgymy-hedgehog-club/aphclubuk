@@ -1,0 +1,53 @@
+div.uk-modal-header
+    |Add Class
+    
+form.uk-form.uk-form-horizontal#add-class
+    div.uk-form-row
+        label.uk-form-label    
+            |Name
+        div.uk-form-controls
+            input(type="text" name="name")
+        
+    div.uk-form-row
+        label.uk-form-label
+            |Gender
+        div.uk-form-controls
+            select(name="gender")
+                option(value="Male")|Male
+                option(value="Female")|Female
+                option(value="Both")|Both
+                
+    div.uk-form-row
+        label.uk-form-label
+            |Minimum Age
+        div.uk-form-controls
+            input.uk-form-width-small(type="text" name="min-date-1" value="12")
+            select(name="min-date-2")
+                option(value="days")|Days
+                option(selected value="weeks")|Weeks
+                option(value="months")|Months
+                option(value="years")|Years
+                
+    div.uk-form-row
+        label.uk-form-label
+            |Maximum Age
+        div.uk-form-controls
+            input.uk-form-width-small(type="text" name="max-date-1" value="")
+            select(name="max-date-2")
+                option(value="days")|Days
+                option(value="weeks")|Weeks
+                option(value="months")|Months
+                option(value="years")|Years
+                
+    div.uk-form-row
+        label.uk-form-label
+            |Price
+        div.uk-form-controls
+            |£ 
+            input.uk-form-width-small(type="text" name="price" value="2.50")
+                
+    div.uk-form-row
+        div.uk-form-controls
+            button.uk-button.uk-button-primary.uk-float-right
+                |Save Show
+                

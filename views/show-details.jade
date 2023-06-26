@@ -1,0 +1,10 @@
+extends templates/base
+
+block content
+    h1= "Show / " + show.name
+    
+    div.uk-text-center.uk-margin-large-top#show-details
+        p= show.name
+        p!= show.location.replace(/\n|\r\n|\r/g, '<br />')
+        p!= show.date + '<br />' + show.time
+    

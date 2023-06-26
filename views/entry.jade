@@ -1,0 +1,38 @@
+extends templates/base
+
+block content
+    
+    h1= "Entry / " + entry.hog.name
+    
+    div.uk-text-center
+        form.uk-form.uk-form-horizontal
+            div.uk-form-row
+                label.uk-form-label
+                    |Hedgehog Name
+                div.uk-form-controls= entry.hog.name
+                        
+            div.uk-form-row
+                label.uk-form-label
+                    |Owner's Name
+                div.uk-form-controls= entry.owner.name
+                        
+            div.uk-form-row
+                label.uk-form-label
+                    |Owner's Email
+                div.uk-form-controls= entry.owner.email
+                
+            div.uk-form-row
+                label.uk-form-label
+                    |Gender
+                div.uk-form-controls= entry.hog.gender
+                
+            div.uk-form-row
+                label.uk-form-label
+                    |Date Of Birth
+                div.uk-form-controls= entry.hog.dob
+                
+            div.uk-form-row
+                label.uk-form-label
+                    |Payment Status
+                div.uk-form-controls= entry.paymentStatus || 'Not Paid'
+        

@@ -1,0 +1,7 @@
+﻿mixin switch(checked, name)
+	link(rel="stylesheet" href="/css/switch.css") 
+	div.onoffswitch
+		input(type="checkbox", name="" + name, id="" + name, checked= checked).onoffswitch-checkbox
+		label.onoffswitch-label(for="" + name)
+			span.onoffswitch-inner
+			span.onoffswitch-switch

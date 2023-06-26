@@ -1,0 +1,14 @@
+this["JST"] = this["JST"] || {};
+
+this["JST"]["views/client/paypal-form"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (className, classPrice, entryID, hogName, payPalAccnt) {
+var jade_indent = [];
+var payPalURL = 'https://www.paypal.com/uk/cgi-bin/webscr';
+var submitText = 'Click this button to pay for your Show registration';
+var regSuccessText = "Thank you for registering " + hogName + " for the " + className + 
+" class, please click the button below to pay £" + classPrice + " for your class registration";
+buf.push("\n<div class=\"uk-modal-header\">Show Entry PayPal</div>\n<div class=\"uk-text-center\">   \n  <p id=\"classRegSuccess\">" + (jade.escape(null == (jade_interp = regSuccessText) ? "" : jade_interp)) + "</p>\n  <form id=\"paypal-btn\" method=\"post\"" + (jade.attr("action", "" + payPalURL, true, false)) + ">\n    <input type=\"hidden\" name=\"cmd\" value=\"_xclick\"/>\n    <input type=\"hidden\" name=\"business\"" + (jade.attr("value", "" + payPalAccnt, true, false)) + "/>\n    <input type=\"hidden\" name=\"custom\"" + (jade.attr("value", "" + entryID, true, false)) + "/>\n    <input type=\"hidden\" name=\"item_name\"" + (jade.attr("value", "" + hogName + ' - ' + className, true, false)) + "/>\n    <input type=\"hidden\" name=\"amount\"" + (jade.attr("value", "" + classPrice, true, false)) + "/>\n    <input type=\"hidden\" name=\"quantity\" value=\"1\"/>\n    <input type=\"hidden\" name=\"notify_url\" value=\"https://africanpygmyhedgehogclub.co.uk/paypal/ipn\"/>\n    <input type=\"hidden\" name=\"image_url\" value=\"https://africanpygmyhedgehogclub.co.uk/\"/>\n    <input type=\"hidden\" name=\"cbt\" value=\"African Pygmy Hedgehog Club\"/>\n    <input type=\"hidden\" name=\"cancel_return\" value=\"https://africanpygmyhedgehogclub.co.uk/\"/>\n    <input type=\"hidden\" name=\"lc\" value=\"GB\"/>\n    <input type=\"hidden\" name=\"currency_code\" value=\"GBP\"/>\n    <input type=\"submit\" name=\"submit_paypal_payment\"" + (jade.attr("value", "" + submitText, true, false)) + " class=\"uk-button uk-button-primary\"/>\n  </form>\n</div>");}.call(this,"className" in locals_for_with?locals_for_with.className:typeof className!=="undefined"?className:undefined,"classPrice" in locals_for_with?locals_for_with.classPrice:typeof classPrice!=="undefined"?classPrice:undefined,"entryID" in locals_for_with?locals_for_with.entryID:typeof entryID!=="undefined"?entryID:undefined,"hogName" in locals_for_with?locals_for_with.hogName:typeof hogName!=="undefined"?hogName:undefined,"payPalAccnt" in locals_for_with?locals_for_with.payPalAccnt:typeof payPalAccnt!=="undefined"?payPalAccnt:undefined));;return buf.join("");
+};

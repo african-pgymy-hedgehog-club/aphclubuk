@@ -1,0 +1,7 @@
+div.classes.uk-float-left
+    ul.classes
+        each clas in classes
+            li.class
+                a(href="/users/class/" + clas._id)= clas.name
+                    |&nbsp;&nbsp;
+                i.uk-icon-times.delete(data-id="" + clas._id)

@@ -1,0 +1,25 @@
+div.uk-modal-header
+    |Add Page
+
+form.uk-form.uk-form-horizontal#add-page
+    div.uk-form-row
+        label.uk-form-label
+            |Name
+        div.uk-form-controls
+            input(type="text" name="name")
+    div.uk-form-row
+        label.uk-form-label
+            |Parent
+        div.uk-form-controls
+            select(name="parent")
+                option(value="null")|None
+                each page in pages
+                  option(value="" + page._id)= page.name
+    div.uk-form-row
+        label.uk-form-label
+            |Active
+        div.uk-form-controls
+            input(type="checkbox" name="active")
+    div.uk-form-row
+        button.uk-button.uk-button-primary.uk-float-right
+            |Save Page
